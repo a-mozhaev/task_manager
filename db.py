@@ -1,3 +1,4 @@
+
 """
 Модуль db.py.
 Содержит функции для работы с базой данных задач SQLite.
@@ -41,7 +42,7 @@ def init_db() -> None:
                 priority TEXT NOT NULL CHECK (
                     priority IN ('Низкий', 'Средний', 'Высокий')
                 ),
-                status TEXT NOT NULL DEFAULT 'новая' CHECK (
+                status TEXT NOT NULL DEFAULT 'Новая' CHECK (
                     status IN ('Новая', 'В работе', 'Выполнено')
                 )
             )
