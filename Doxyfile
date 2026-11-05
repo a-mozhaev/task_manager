@@ -1,10 +1,13 @@
+
 PROJECT_NAME           = "Менеджер задач"
 PROJECT_BRIEF          = "To-Do List с приоритетами"
+OUTPUT_LANGUAGE        = Russian
 
-INPUT                  = main.py logic.py db.py
-FILE_PATTERNS          = *.py
+INPUT                  = README.md main.py logic.py db.py
+FILE_PATTERNS          = *.py *.md
 RECURSIVE              = NO
 
+USE_MDFILE_AS_MAINPAGE = README.md
 EXTRACT_ALL            = YES
 MARKDOWN_SUPPORT       = YES
 
