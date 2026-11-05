@@ -1,0 +1,16 @@
+PROJECT_NAME           = "Менеджер задач"
+PROJECT_BRIEF          = "To-Do List с приоритетами"
+
+INPUT                  = main.py logic.py db.py
+FILE_PATTERNS          = *.py
+RECURSIVE              = NO
+
+EXTRACT_ALL            = YES
+MARKDOWN_SUPPORT       = YES
+
+OUTPUT_DIRECTORY       = .
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+
+QUIET                  = YES
