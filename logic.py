@@ -86,16 +86,21 @@ def validate_task_id(task_id: int) -> int:
     return task_id
 
 
+
 def sort_tasks_by_priority(tasks: list[dict]) -> list[dict]:
     """
-    @brief Сортирует задачи по убыванию приоритета.
+    @brief Сортирует задачи по приоритету и идентификатору.
 
     @param tasks Список задач.
-    @return Отсортированный список задач.
+    @return Список задач, отсортированный по приоритету
+            и возрастанию идентификатора.
     """
     return sorted(
         tasks,
-        key=lambda task: PRIORITY_ORDER[task["priority"]]
+        key=lambda task: (
+            PRIORITY_ORDER[task["priority"]],
+            task["id"]
+        )
     )
 
 

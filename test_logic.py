@@ -118,3 +118,28 @@ def test_invalid_task_id():
     """Проверяет отклонение неправильного ID."""
     with pytest.raises(ValueError):
         logic.remove_task(0)
+
+
+def test_sort_high_before_low():
+    """Проверяет сортировку высокого приоритета перед низким."""
+    tasks = [
+        {"id": 1, "priority": "Низкий"},
+        {"id": 2, "priority": "Высокий"}
+    ]
+
+    result = logic.sort_tasks_by_priority(tasks)
+
+    assert [task["id"] for task in result] == [2, 1]
+
+
+def test_sort_equal_priority_by_id():
+    """Проверяет сортировку одинаковых приоритетов по ID."""
+    tasks = [
+        {"id": 12, "priority": "Высокий"},
+        {"id": 3, "priority": "Высокий"},
+        {"id": 5, "priority": "Низкий"}
+    ]
+
+    result = logic.sort_tasks_by_priority(tasks)
+
+    assert [task["id"] for task in result] == [3, 12, 5]
