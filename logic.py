@@ -1,4 +1,3 @@
-
 """
 Модуль logic.py.
 Содержит бизнес-логику менеджера задач.
@@ -84,7 +83,6 @@ def validate_task_id(task_id: int) -> int:
         raise ValueError("ID задачи должен быть положительным числом!")
 
     return task_id
-
 
 
 def sort_tasks_by_priority(tasks: list[dict]) -> list[dict]:
